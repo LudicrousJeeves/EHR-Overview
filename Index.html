@@ -1,0 +1,222 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>EHR Overview</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Electronic Health Record<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Report Generator.html">Report Generator</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Queue System
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="Queue Overview">Queue Overview</a>
+                        <a class="dropdown-item" href="Appointments Queue.html">Appointment Queue</a>
+                        <a class="dropdown-item" href="Case Management Queue.html">Case Management Queue</a>
+                        <a class="dropdown-item" href="Consults Queue.html">Consults Queue</a>
+                        <a class="dropdown-item" href="Emergency Room Queue.html">Emergency Room Queue</a>
+                        <a class="dropdown-item" href="Inpatient Queue.html">Inpatient Queue</a>
+                        <a class="dropdown-item" href="Visits Queue.html">Visits Queue</a>
+                        <a class="dropdown-item" href="System Management.html">System Management</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="ehrOverview">
+    </div>
+
+    <div id=textArea>
+        <div class="jumbotron">
+            <h1 class="display-4">Choctaw Nation Queue System</h1>
+            <hr class="my-4">
+            <h2>What is it?</h2>
+            <p id=dataSet>The Choctaw Nation Queue System is a customized component in Electronic Health Record (EHR) that helps monitor various
+                <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#dataset" aria-expanded="false" aria-controls="dataset">
+                    datasets
+                </button>
+                in real time along with giving the ability to manage the workflow of activities related to each department within a facility. The Queue is designed to easily show and filter patient information in one centralized location rather than navigating through multiple different tabs to gather required information. For example, if you only want to see scheduled patients from only one facility, then you can tell the system what facility you want to be viewing. The Queue also provides several different customized layouts that can alter the columns in the table that is shown. This customizability can make it to where there is just a quick view of a patient's information or a more detailed view of a patient's information. An example of this is if the <strong>Default Visit Layout</strong> was selected in the <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#fieldLayout" aria-expanded="false" aria-controls="fieldLayout">
+                    Field Layout
+                </button>, then the Queue will generate a view that is setup for that layout.</p>
+
+            <!-- Dataset collapse content -->
+            <div class="collapse" id="dataset">
+                <div class="card card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src=Datasets.PNG id=queueDataset alt="Datasets Example" />
+                            </div>
+                            <div class="col-md-6">
+                                <p id=cardText>A dataset is a collection of data. This corresponds to contents that are inside a single database table. You can find the datasets that are within the Queue by clicking on the three dots <img src="Ellipsis.PNG" alt="Ellipsis" align="middle">
+                                    button and looking at the box under the <strong>"What do you wish to View/Monitor:"</strong></p>
+                                <br>
+                                <p id=cardText>
+                                    Based upon what keys you have, you will see a different amount of datasets. For example, if you can't see the <strong>Case Management</strong> dataset, then you don't have the correct keys to
+                                    view <strong>Case Management</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Field Layout collapse content -->
+            <div class="collapse" id="fieldLayout">
+                <div class="card card-body">
+                    <div class=" row">
+                        <div class="col-md-7">
+                            <div id="cf2">
+                                <img class="bottom" src=DefaultVisitLayoutExample.PNG id=defaultVisitLayoutExample alt="Default Visit Layout Example" />
+                                <img class="top" src=BriefVisitLayoutExample.PNG id=defaultVisitLayoutExample alt="Brief Visit Layout Example" />
+                            </div>
+                            <p id="cf_onclick">Click Image to see how changing your Field Layout can change your view</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p id=cardText>The purpose of Field Layout is to change what kind of data is displayed in the Queue. This makes it to where it is easy to customize the view according to how much information is needed. </p>
+                            <p id=cardText>If only a small amount of information is needed, then the Brief Visit Layout might be the best choice, but if more detail is preferred, then Default Visit Layout might be better. </p>
+                            <p id=cardText>Field Layout is strictly user preference, but some layouts will display better information depending on what department the user is in.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <br />
+
+        <h2>Layout</h2>
+        <br />
+        <div class="row">
+            <div class="col-md-7">
+                <img src="QueueExample.PNG" alt="QueueExample" usemap="#queueGuide" />
+
+                <map name="queueGuide">
+                    <area shape="rect" coords="3, 86, 251, 125" onmouseover="writeCardText('This is a test')" />
+                    <area shape="rect" coords="258, 86, 499, 125" onmouseover="writeCardText('This is a test')" />
+                    <area shape="rect" coords="762, 86, 1014, 125" onmouseover="writeCardText('This is a test')" />
+                    <area shape="rect" coords="76, 200, 251, 125" onmouseover="writeCardText('This is a test')" />
+                    <area shape="rect" coords="3, 86, 251, 125" onmouseover="writeCardText('This is a test')" />
+                    <area shape="rect" coords="3, 86, 251, 125" onmouseover="writeCardText('This is a test')" />
+                </map>
+            </div>
+            <div class="col-md-5">
+                <div class="card" style="width: 18rem;" id=layoutCardHidden>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p id="desc" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <p id=dataSet>The Queue system
+            also provides customized layouts to help view the datasets in a different way. You can also filter the datasets by parameters. The first column of the Queue
+            has a color coded status indicator for each appointment that is shown. To find out what these colors mean, you can
+            view the <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#legend" aria-expanded="false" aria-controls="legend">
+                legend
+            </button>
+            by clicking on the three dots
+            <img src="Ellipsis.PNG" alt="Ellipsis" align="middle"> button located next to the appointments bar at the top. You can filter the appointments that are shown
+            to you by unchecking the checkbox at the legend. The Queue system also displays icons or color coded alerts for abnormal conditions that is configurable for
+            each data field. If you hover over the data field that contains an icon or a color coded alert, then you can hover over that field and it will provide a popup
+            message giving you more detail about the icon or color coded alert. Some <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#layout" aria-expanded="false" aria-controls="layout">
+                layouts
+            </button>
+            contain counter fields for departments like
+            lab and radiology. This counter shows the number of uncompleted results by the total ordered with a flashing back-color as the overdue completion time elapses
+            in 30 minute increments. Clicking on a row within the Queue selects the associated patient and visit for the EHR.
+        </p>
+
+        <!--Legend button dropdown -->
+        <div class="collapse" id="legend">
+            <div class="card card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src=Legend.PNG id=queueDataset alt="Legend Screenshot" />
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>White:</strong> Gives the status that the patient's appointment is scheduled.</li>
+                                <li class="list-group-item"><strong>Blue:</strong> Gives the status that the patient has checked in to their appointment.</li>
+                                <li class="list-group-item"><strong>Teal:</strong> Gives the status that the patient is triaged.</li>
+                                <li class="list-group-item"><strong>Green:</strong> Gives the status that the patient has checked out of their appointment.</li>
+                                <li class="list-group-item"><strong>Yellow:</strong> Gives the status that the patient has cancelled their appointment.</li>
+                                <li class="list-group-item"><strong>Ivory:</strong> Gives the status that the patient has cancelled their appointment less than 24 hours from their scheduled appointment.</li>
+                                <li class="list-group-item"><strong>Red:</strong> Gives the status that the patient was a no call no show.</li>
+                                <li class="list-group-item"><strong>Black:</strong> Gives the status that the patient is an admin.</li>
+                                <li class="list-group-item"><strong>Orange:</strong> Gives the status that the patient has moved to a different time???</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#ehrOverview").load("EHR Overview.html");
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#cf_onclick").click(function() {
+                $("#cf2 img.top").toggleClass("transparent");
+            });
+        });
+    </script>
+
+    <!--Only one collapse can be opened at a time-->
+    <script>
+        $(document).ready(function() {
+            jQuery('button').click(function(e) {
+                jQuery('.collapse').collapse('hide');
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            function writeCardText(txt) {
+                document.getElementById("desc").innerHTML = txt;
+            });
+
+        $("queueGuide").click(function() {
+            $("")
+        })
+        });
+    </script>
+</body></html>
