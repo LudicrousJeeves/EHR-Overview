@@ -3,7 +3,7 @@
 }
 
 p {
-    font-size: 20px;
+    font-size: 125%;
 }
 
 h1 {
@@ -17,26 +17,33 @@ h1 {
     text-indent: 5%;
 }
 
-#cardText {
-    text-indent: 10%;
-    margin: 1% 1%;
-}
-
 #paragraphTwo {
     margin: 1% 1%;
     text-indent: 5%;
 }
 
-#queueScreenshot {
-    margin-left: 20%;
-}
 
 #queueExample {
     margin: 0 auto;
 }
 
-#layoutCardHidden {
-    visibility: hidden;
+#descCard {
+    border: solid black 1px;
+    border-radius: 2%;
+}
+
+#cardHeader {
+    border-bottom: solid black;
+    text-align: center;
+}
+
+#cardDescription {
+    text-indent: 4%;
+}
+
+#cardText {
+    margin-top: 5%;
+    text-indent: 3%;
 }
 
 #defaultVisitLayoutExample {
